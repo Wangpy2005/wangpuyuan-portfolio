@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #0A0A0A;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid #0A0A0A;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Image loading states */
+img {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+/* Line animation */
+.line-animate {
+  transform-origin: left;
+  animation: lineExpand 0.8s ease-out forwards;
+}
+
+@keyframes lineExpand {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}

@@ -1,0 +1,18 @@
+.vercel
+
+# PDF files (too large for GitHub)
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Large folders
+所有图片的压缩包/
+site.zip
